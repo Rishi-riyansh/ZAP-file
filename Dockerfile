@@ -1,5 +1,6 @@
 FROM image-registry.openshift-image-registry.svc:5000/openshift/jenkins-agent-nodejs:latest
 user root
+RUN subscription-manager attach --auto
 RUN dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 RUN dnf upgrade
 RUN sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
