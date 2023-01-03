@@ -8,7 +8,7 @@ CMD rm -rf /etc/rhsm-host
 #RUN dnf upgrade
 #RUN sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
 #RUN yum update
-RUN yum install snapd -y
+RUN rpm install snapd
 RUN systemctl enable --now snapd.socket
 RUN ln -s /var/lib/snapd/snap /snap
 RUN snap install zaproxy --classic
