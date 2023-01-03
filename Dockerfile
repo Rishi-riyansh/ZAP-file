@@ -4,7 +4,7 @@ RUN dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noar
 RUN dnf upgrade
 RUN sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
 RUN sudo yum update
-RUN sudo yum install snapd
+RUN sudo yum install snapd -y
 RUN sudo systemctl enable --now snapd.socket
 RUN sudo ln -s /var/lib/snapd/snap /snap
 RUN sudo snap install zaproxy --classic
