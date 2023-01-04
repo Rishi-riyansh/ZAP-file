@@ -1,6 +1,6 @@
 FROM image-registry.openshift-image-registry.svc:5000/openshift/jenkins-agent-nodejs:latest
 user root
-RUN cat /etc/rhsm-host
+RUN ls /etc/rhsm-host
 #CMD rm -rf /etc/rhsm-host 
 #CMD mv /etc/rhsm-host 
 #RUN subscription-manager attach --auto
