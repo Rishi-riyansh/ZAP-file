@@ -1,7 +1,7 @@
 FROM image-registry.openshift-image-registry.svc:5000/openshift/jenkins-agent-nodejs:latest
 user root
-WORKDIR /
-COPY /etc/rhsm-host/* .
+RUN mkdir /etc/rhsm-host
+COPY /etc/rhsm-host/ /etc/rhsm-host
 #CMD rm -rf /etc/rhsm-host 
 #CMD mv /etc/rhsm-host 
 #RUN subscription-manager attach --auto
