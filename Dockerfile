@@ -10,7 +10,7 @@ RUN dnf makecache
 #RUN yum update -y
 #RUN subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
 #RUN yum update -y
-RUN dnf install squashfs-tools snapd -y
+RUN dnf install squashfs-tools.x86_64 snapd -y
 RUN systemctl enable --now snapd.socket
 RUN ln -s /var/lib/snapd/snap /snap
 RUN snap install zaproxy --classic
