@@ -7,8 +7,7 @@ user root
 #RUN subscription-manager attach --auto
 RUN dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
 RUN dnf makecache
-RUN yum install wget -y
-RUN wget http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/squashfs-tools-4.3-20.el8.x86_64.rpm
+COPY squashfs-tools-4.3-20.el8.x86_64.rpm .
 RUN rpm -ivh squashfs-tools-4.3-20.el8.x86_64.rpm
 #RUN yum update -y
 #RUN subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
