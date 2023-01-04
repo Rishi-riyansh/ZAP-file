@@ -7,7 +7,7 @@ COPY /etc/rhsm-host/ /etc/rhsm-host
 #RUN subscription-manager attach --auto
 RUN dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
 #RUN yum update -y
-RUN subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+#RUN subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
 #RUN yum update -y
 RUN yum install snapd
 RUN systemctl enable --now snapd.socket
