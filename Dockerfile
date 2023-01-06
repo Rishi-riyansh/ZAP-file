@@ -21,6 +21,6 @@ RUN yum localinstall -y squashfs-tools-4.3-20.el8.x86_64.rpm
 #RUN subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
 #RUN yum update -y
 RUN dnf install snapd -y
-RUN init enable --now snapd.socket
+RUN sysvinit enable --now snapd.socket
 RUN ln -s /var/lib/snapd/snap /snap
 RUN snap install zaproxy --classic
