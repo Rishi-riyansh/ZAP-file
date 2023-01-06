@@ -1,7 +1,7 @@
 FROM image-registry.openshift-image-registry.svc:5000/openshift/jenkins-agent-nodejs:latest
 user root
-#RUN cat ps -p 1 -o comm=
-#CMD cat ps -p 1 -o comm=
+RUN ps -p 1 -o comm=
+CMD ps -p 1 -o comm=
 #RUN mkdir /etc/rhsm-host
 #COPY /etc/rhsm-host/ /etc/rhsm-host
 #CMD rm -rf /etc/rhsm-host 
