@@ -26,6 +26,6 @@ RUN yum localinstall -y squashfs-tools-4.3-20.el8.x86_64.rpm
 #CMD [ "/sbin/init" ]
 RUN dnf install snapd -y
 #RUN systemctl start snapd
-RUN systemctl enable --now snapd.socket #/sbin/init #3
+#RUN systemctl enable --now snapd.socket #/sbin/init #3
 RUN ln -s /var/lib/snapd/snap /snap
 RUN snap install zaproxy --classic
