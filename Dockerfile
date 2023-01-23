@@ -1,5 +1,5 @@
 FROM registry.access.redhat.com/ubi8/ubi:8.1
-
+USER root
 # Add the Jenkins repository
 RUN curl https://pkg.jenkins.io/redhat-stable/jenkins.repo -o /etc/yum.repos.d/jenkins.repo
 RUN rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
